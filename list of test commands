@@ -1,0 +1,21 @@
+// This is a text not a script file
+
+check list of instrumentation
+adb shell pm list instrumentation
+
+run test project 
+adb shell am instrument -w com.example.hisashi.listviewlearning.test/android.test.InstrumentationTestRunner
+
+
+instrumentation test: 
+./gradlew cC
+
+unit tests
+./gradlew test --continue
+
+
+monkey stress test
+bash monkeyTesting.bash
+
+monkeyrunner UI test
+monkeyrunner monkeyrunner.py

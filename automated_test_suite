@@ -1,0 +1,18 @@
+# This bash file will build the project, run instrumented and unit tests,
+# and monkey stress tests and monkeyrunner UI tests.
+
+
+echo "building the project in debug mode..."
+./gradlew assembleDebug
+
+echo "running instrumentation tests..."
+./gradlew cC
+
+echo "running unit tests..."
+./gradlew test --continue
+
+echo "running monkey stress tests..."
+adb shell monkey -p com.example.hisashi.listviewlearning -v 500 
+
+echo "running monkeyrunner UI tests..."
+monkeyrunner monkeyrunner.py

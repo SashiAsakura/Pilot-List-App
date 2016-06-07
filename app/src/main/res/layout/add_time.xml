@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+    <!--<TextView-->
+        <!--android:text="Time"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"/>-->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/time_text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/add_time_edit_text"
+            android:hint="@string/time_text_hint"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <!--<TextView-->
+        <!--android:text="Notes"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"/>-->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/notes_text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/add_notes_edit_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center_horizontal">
+        <Button
+            android:text="Cancel"
+            android:onClick="onCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/silver"
+            android:layout_margin="8px"/>
+        <Button
+            android:id="@+id/save_button"
+            android:text="Save"
+            android:onClick="onSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/lightblue"
+            android:textColor="@color/white"
+            android:enabled="true"
+            android:layout_margin="8px"/>
+
+    </LinearLayout>
+</LinearLayout>
